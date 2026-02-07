@@ -1,4 +1,24 @@
-name: Close bad repo-sync PRs
+name: Close            - nama: Setup .NET Core SDK
+  penggunaan: actions/setup-dotnet@v5.1.0
+  dengan:
+    # Versi SDK opsional yang akan digunakan. Jika tidak disediakan, akan menginstal versi global.json jika tersedia. Contoh: 2.2.104, 3.1, 3.1.x, 3.x, 6.0.2xx
+    dotnet-version: # opsional
+    # Kualitas build opsional. Nilai yang mungkin adalah: daily, signed, validated, preview, ga.
+    dotnet-quality: # opsional
+    # Lokasi global.json opsional, jika global.json Anda tidak terletak di root repositori.
+    global-json-file: # opsional
+    # Sumber paket opsional untuk pengaturan otentikasi. Akan memeriksa NuGet.config yang ada di root repositori dan menyediakan NuGet.config sementara menggunakan variabel lingkungan NUGET_AUTH_TOKEN sebagai ClearTextPassword
+    URL sumber: # opsional
+    # OWNER opsional untuk menggunakan paket dari organisasi/pengguna GitHub Package Registry selain pemilik repositori saat ini. Hanya digunakan jika URL GPR juga disediakan di source-url.
+    pemilik: # opsional
+    # Lokasi NuGet.config opsional, jika NuGet.config Anda tidak terletak di root repositori.
+    file konfigurasi: # opsional
+    # Input opsional untuk mengaktifkan caching folder global-packages NuGet
+    cache: # opsional
+    # Digunakan untuk menentukan jalur ke file dependensi: packages.lock.json. Mendukung wildcard atau daftar nama file untuk menyimpan beberapa dependensi dalam cache.
+    cache-dependency-path: # opsional
+          
+           bad repo-sync PRs
 
 # **What it does**:
 #   Closes and PR from `repo-sync` to `main` that wasn't created by a Hubber.
